@@ -73,7 +73,7 @@ crossValidation <- function(xs=xs, ys=ys, deg=deg, lambda=lambda){
   return(err/length(xs))
 }
 
-findOptimumDegAndLambda <- function(xs, ys, dValues=1:8, lambdaVals=0:100, verbose=TRUE){
+findOptimumDegAndLambda <- function(xs, ys, dValues=1:8, lambdaVals=c(seq(0,5,length.out=26), 6:25, seq(30, 100, length.out=15)), verbose=TRUE){
   optErr = Inf
   optLambda = NA
   optD = NA
